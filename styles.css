@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px;
+    background-color: #f2f2f2; /* Light gray background */
+    margin-top: 0px; /* Move the top bar 20px down from the top */
+}
+
+.top-bar ul {
+    margin-left: 15px; /* Add some space between icons */
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #333; /* Icon color */
+}
+
+/* You can add additional styles to the icons if needed */
+ion-icon {
+    font-size: 30px; /* Adjust icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for icons */
+ion-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+
+/* Seach bar */
+.navbar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+.search-form {
+    margin-right: 9px; /* Adjust margin as needed */
+    margin-top: 7px;
+}
+
+.search-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.navbar {
+    background-color:  #1f2b38; /* Dark blue */
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    align-items: center; /* Align items vertically in the center */
+    position: relative; /* Ensure navbar remains above other elements */
+    z-index: 1; /* Set a higher z-index to ensure it's above the banner */
+    height: 40px; /* Increase the height of the navbar */
+    width: 100%; /* Make sure the navbar spans the entire width */
+}
+
+.navbar a {
+    padding: 10px; /* Add padding around each link */
+    border: 1px solid transparent; /* Add a transparent border to each link */
+    margin: 0 5px; /* Add margin between each link */
+    border-radius: 25px; /* Add border radius to make it look like a button */
+    text-decoration: none; /* Remove default underline from links */
+    color: #ecf0f1; /* Light gray */
+}
+
+.navbar a:hover {
+    background-color: #34495e; /* Darker blue on hover */
+    border-color: #f4f5f7; /* Darker blue border on hover */
+}
+
+.banner-area {
+    background-image: url(banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 464px; /* Set the height of the banner to the height of the viewport */
+    width: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue; /* Set text color */
+    z-index: 0; /* Lower z-index to ensure it's below navbar */
+}
+
+.banner-area h2 {
+    font-size: 4vw; /* Set font size as percentage of viewport width */
+}
+
+.fancy-text {
+    font-family: cursive; /* Use cursive font */
+    font-size: 48px; /* Adjust font size */
+    color: #ffffff; /* White color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    letter-spacing: 2px; /* Add letter spacing */
+}
+
+.banner-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 26, 59, 0.6);
+    z-index: -1;
+}
+
+/* Inputs */
+ /* Main section styles */
+main {
+    padding-top:0px; /* Adjust this value according to your banner height */
+    padding-bottom:20px; /* Add padding at the bottom to separate from footer */
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 50px 0;
+    background-color: #2c3e50; /* Light gray background */
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('your-image-url.jpg'); /* Background image with overlay */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    border-top: 2.5px solid #fff; /* Separation line at the top */
+    position: relative; /* Add position relative to use ::before pseudo-element */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 27px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.hero input[type="text"], .hero input[type="date"] {
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero button {
+    padding: 15px 30px;
+    background-color: #007afc; /* Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.hero button:hover {
+    background-color: #34495e; /* Darker blue on hover */
+}
+
+/* Featured flights section styles */
+.featured-flights {
+    margin-bottom: 30px;
+}
+
+.featured-flights h2 {
+    margin-bottom: 10px;
+}
+
+/* Reservations section styles */
+.reservations {
+    margin-bottom: 30px;
+}
+
+.reservations h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e; /* Dark blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Hotel booking part */
+.Hotel-booking-section h2 {
+    text-align: center;
+}
+.hotel-catalog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hotel {
+    width: 30%;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent image overflow */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* Rounded corners on top */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555; /* Text color */
+}
+
+.card-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
+
+
+/* color for star */
+.star-rating {
+    color: #ffd700; /* Golden color */
+    font-size: 24px; /* Adjust the size of the stars */
+}
+
+.star {
+    display: inline-block;
+}
+
+/* Cab css */
+
+
+.card {
+    width: 300px;
+    margin-bottom: 48px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: -21px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+}
+
+.card-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
+
+.cab-booking-section {
+    padding: 52px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cab-booking {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.cab-booking .card {
+    width: 300px;
+    margin: 0px auto 51px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+.cab-booking .card:hover {
+    transform: translateY(-5px);
+}
+
+.cab-booking .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.cab-booking .card-content {
+    padding: 20px;
+}
+
+.cab-booking .card-content h3 {
+    margin-bottom: 10px;
+}
+
+.cab-booking .card-content p {
+    margin-bottom: 20px;
+}
+
+.cab-booking .card-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cab-booking .card-content button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* CSS for contact us */
+footer {
+    background-color:  #1f2b38;; /* Dark blue background */
+    color: #fff;
+    padding: 50px 0; /* Add some padding */
+    text-align: center; /* Center-align content */
+}
+
+.contact-us {
+    margin-bottom: 30px; /* Add some space between sections */
+}
+
+.contact-us h2 {
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+.contact-us form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-us form input,
+.contact-us form textarea,
+.contact-us form button {
+    margin: 10px;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-us form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.footer-links {
+    margin-top: 30px; /* Add space above links */
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 10px; /* Add space between links */
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0; /* Remove margin for last link */
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+
